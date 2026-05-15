@@ -1,6 +1,7 @@
----
+    ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/enzosola/public_html/biodigestores.ecosuyu.cl/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp -rf $REPOSITORY_BASEDIR/dist/. $DEPLOYPATH
+    - export DEPLOYPATH=/home2/enzosola/public_html/biodigestores.ecosuyu.cl
+    - /bin/rm -rf $DEPLOYPATH/assets
+    - /bin/rm -rf $DEPLOYPATH/index.html
+    - /bin/cp -rf $REPOSITORY_BASEDIR/dist/* $DEPLOYPATH
